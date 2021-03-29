@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect } from "react"
 import Signup from "./Signup"
 import { Container } from "react-bootstrap"
 import { AuthProvider } from '../contexts/AuthContext'
@@ -10,6 +10,10 @@ import ForgotPassword from "./ForgotPassword"
 import UpdateProfile from "./UpdateProfile"
 
 function App() {
+  useEffect(() => {
+    document.title = "Firebase Auth Test"
+  })
+
   return (
     <AuthProvider>
       <Container
